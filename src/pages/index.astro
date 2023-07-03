@@ -9,75 +9,89 @@
 		<title>La Velada del Año - Proyecto de ejercicio</title>
 	</head>
 	<body>
-		<header></header>
+		<header class='relative'>
+			<div
+				class='absolute left-1/2 -translate-x-1/2 flex flex-col gap-1 justify-center items-center top-8'
+			>
+				<img src='/logo.webp' alt='Logo' class='w-32 lg:w-64 h-auto' />
+				<h1 class='font-boxing text-3xl text-center text-white font-bold'>
+					<span
+						class='bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-300 to-white inline-block leading-relaxed'
+						>la velada del año</span
+					>
+					<span class='text-yellow-500'>III</span>
+				</h1>
+			</div>
+		</header>
 		<main>
 			<section
 				id='boxers'
 				class={`flex justify-between relative
-					[&>div>img]:absolute [&>div>img]:bottom-0 [&>div>img]:w-auto 
+					[&>div>img]:absolute [&>div>img]:bottom-0 [&>div>img]:w-auto
+					[&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-1000
 					h-[40vh] lg:h-screen pt-24 border-b border-white/10
 				`}
 			>
 				<div class='relative w-full'>
 					<img
-						class='left-0 h-full z-50'
+						class='left-0 h-full z-50 animate-fade-right animate-delay-0'
 						src='/boxers/coscu.webp'
 						alt='Coscu img'
 					/>
 					<img
-						class='left-[5%] h-[80%] z-40'
+						class='left-[5%] h-[80%] z-40 animate-fade-right animate-delay-300'
 						src='/boxers/mayichi.webp'
 						alt='Mayichi'
 					/>
 					<img
-						class='left-[15%] h-[75%] z-30'
+						class='left-[15%] h-[75%] z-30 animate-fade-right animate-delay-500'
 						src='/boxers/viruzz.webp'
 						alt='Viruz'
 					/>
 					<img
-						class='left-[28%] h-[70%] z-20'
+						class='left-[30%] h-[70%] z-20 animate-fade-right animate-delay-700'
 						src='/boxers/fernanfloo.webp'
 						alt='FernanFloo'
 					/>
 					<img
-						class='left-[40%] h-[68%] z-10'
+						class='left-[42%] h-[68%] z-10 animate-fade-right animate-delay-1000'
 						src='/boxers/la-rivers.webp'
 						alt='La Rivers'
 					/>
 					<img
-						class='left-[45%] h-[63%] z-0'
+						class='left-[46%] h-[63%] z-0 animate-fade-right animate-delay-[1300ms]'
 						src='/boxers/papigavi.webp'
 						alt='Papigavi'
 					/>
 				</div>
 				<div class='relative w-full'>
 					<img
-						class='right-0 h-full z-50'
+						class='right-0 h-full z-50 animate-fade-left animate-delay-0'
 						src='/boxers/german.webp'
 						alt='German'
 					/>
 					<img
-						class='right-[5%] h-[80%] z-40'
+						class='right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300'
 						src='/boxers/amouranth.webp'
 						alt='Amouranth'
 					/>
 					<img
-						class='right-[15%] h-[75%] z-30'
+						class='right-[15%] h-[75%] z-30 animate-fade-left animate-delay-500'
 						src='/boxers/shelao.webp'
 						alt='Shelao'
 					/>
 					<img
-						class='right-[28%] h-[70%] z-20'
+						class='right-[30%] h-[70%] z-20 animate-fade-left animate-delay-700'
 						src='/boxers/luzu.webp'
 						alt='Luzu'
 					/>
 					<img
-						class='right-[40%] h-[68%] z-10'
+						class='right-[42%] h-[68%] z-10 animate-fade-left animate-delay-1000'
 						src='/boxers/rivers.webp'
 						alt='Rivers'
 					/>
 					<img
-						class='right-[45%] h-[63%] z-0'
+						class='right-[46%] h-[63%] z-0 animate-fade-left animate-delay-[1300ms]'
 						src='/boxers/ampeter.webp'
 						alt='Ampeter'
 					/>
@@ -91,5 +105,17 @@
 <style is:global>
 	body {
 		background: #131313;
+	}
+
+	@font-face {
+		font-family: 'Boxing';
+		src: url('/fonts/boxing.otf');
+		font-weight: bold;
+	}
+
+	@font-face {
+		font-family: 'Boxing Striped';
+		src: url('/fonts/boxing-striped.woff2');
+		font-weight: bold;
 	}
 </style>
