@@ -1,0 +1,50 @@
+---
+import boxers from '../../boxers.json'
+---
+
+<div class='relative w-full'>
+  <img
+    class='right-0 h-full z-50'
+    srcset='/boxers/german-mobile.webp 767w, /boxers/german.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Germán'
+    style={boxers.german.clip}
+    fetchpriority='high'
+  />
+  <img
+    class='right-[5%] h-[80%] z-40 animate-fade-left'
+    srcset='/boxers/amouranth-mobile.webp 767w, /boxers/amouranth.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Amouranth'
+    style={boxers.amouranth.clip}
+  />
+  <img
+    class='right-[15%] h-[75%] z-30 animate-fade-left animate-delay-300'
+    srcset='/boxers/shelao-mobile.webp 767w, /boxers/shelao.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Shelao'
+    style={boxers.shelao.clip}
+  />
+  <img
+    class='right-[30%] h-[70%] z-20 animate-fade-left animate-delay-500'
+    srcset='/boxers/luzu-mobile.webp 767w, /boxers/luzu.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Luzu'
+    style={boxers.luzu.clip}
+  />
+  <img
+    class='right-[42%] h-[68%] z-10 animate-fade-left animate-delay-700'
+    srcset='/boxers/rivers-mobile.webp 767w, /boxers/rivers.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Rivers'
+    style={boxers.rivers.clip}
+  />
+  <img
+    class='right-[46%] h-[63%] z-0 animate-fade-left animate-delay-1000'
+    srcset='/boxers/ampeter-mobile.webp 767w, /boxers/ampeter.webp'
+    sizes='(max-width: 767px) 767px, 100vw'
+    alt='Ampeter'
+    style={boxers.ampeter.clip}
+    fetchpriority='low'
+  />
+</div>

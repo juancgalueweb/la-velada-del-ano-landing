@@ -1,0 +1,26 @@
+---
+import CombatCard from './CombatCard.astro'
+import InfoCard from './InfoCard.astro'
+import LeftBoxers from './LeftBoxers.astro'
+import MainBg from './MainBg.astro'
+import RightBoxers from './RightBoxers.astro'
+import VerticalLines from './VerticalLines.astro'
+---
+
+<main class='relative'>
+  <section
+    id='boxers'
+    class={`flex justify-between relative
+        [&>div>img]:absolute [&>div>img]:bottom-0 [&>div>img]:w-auto
+        [&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-700
+        h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10 overflow-hidden
+      `}
+  >
+    <MainBg />
+    <VerticalLines />
+    <LeftBoxers />
+    <RightBoxers />
+  </section>
+  <InfoCard />
+  <CombatCard />
+</main>
