@@ -253,8 +253,8 @@ import boxers from '../boxers.json'
 	const $boxers = document.querySelector('#boxers')
 	const $boxersImages = $boxers.querySelectorAll('img')
 
-	const $info = document.querySelector('#info') as HTMLElement
-	const $combat = document.querySelector('#combat') as HTMLElement
+	const $info = document.getElementById('info') as HTMLElement
+	const $combat = document.getElementById('combat') as HTMLElement
 
 	$boxersImages.forEach(($img) => {
 		$img.addEventListener('mouseleave', () => {
@@ -265,11 +265,14 @@ import boxers from '../boxers.json'
 			})
 
 			$info.style.opacity = '1'
+			$info.style.visibility = 'visible'
 			$info.style.transition = 'all .3s ease-in-out'
 
 			$combat.style.opacity = '0'
+			$combat.style.visibility = 'hidden'
 			$combat.style.transition = 'all .3s ease-in-out'
 		})
+
 		$img.addEventListener('mouseenter', () => {
 			const sectionImages = $img.parentNode.children
 			const position = Array.from(sectionImages).indexOf($img)
@@ -280,6 +283,7 @@ import boxers from '../boxers.json'
 			]
 			// Hide the information
 			$info.style.opacity = '0'
+			$info.style.visibility = 'hidden'
 			$info.style.transition = 'all .3s ease-in-out'
 
 			$combat.style.opacity = '1'
